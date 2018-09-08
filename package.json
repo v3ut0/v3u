@@ -1,0 +1,19 @@
+{
+  "name": "v3u",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.5.0"
+  },
+  "dependencies": {
+    "fbemitter": "^2.1.1",
+    "underscore": "^1.9.1"
+  }
+}
