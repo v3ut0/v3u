@@ -1,7 +1,6 @@
-const { Queue, Composer, Protocol } = require('./lib')
+const { Queue, Protocol } = require('./lib')
 
 module.exports = {
   Queue,
-  Composer,
   Protocol,
 }
