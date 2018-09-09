@@ -11,3 +11,34 @@ These basic benchmarks ran 10,000 jobs through each library, Node (v10.5.0), sys
 The number shown are average of 10 runs.
 - bee-queue: 3017.1725 ms
 - v3u: 2144.2959 ms
+## Start Cheetah job server
+Read document at [cheetah](https://github.com/v3ut0/cheetah)
+## Get started
+```bash
+yarn add v3u
+```
+
+Create a queue:
+
+```node
+const { Queue } = require('v3u')
+const queue = new Queue('mul', {
+  uri: 'cheetah://localhost:1991',
+})
+```
+Create a worker:
+
+```node
+queue.process(({ x, y}, done, progress) => {
+  done(null, x * y);
+})
+```
+Create a producer:
+
+```node
+queue.createJob({x: 2, y: 3}, (value) => {
+  // job done, value = 6
+}, (p) => {
+  // job progress, is called multiple times
+})
+```
